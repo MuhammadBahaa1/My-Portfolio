@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- UNICONS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script>
+        let slideIndex = 0;
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            slideIndex = 0; // Reset slide index for each modal
+            showSlides(modalId, slideIndex);
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        function nextSlide(modalId) {
+            slideIndex++;
+            showSlides(modalId, slideIndex);
+        }
+
+        function prevSlide(modalId) {
+            slideIndex--;
+            showSlides(modalId, slideIndex);
+        }
+
+        function showSlides(modalId, n) {
+            let modal = document.getElementById(modalId);
+            let slides = modal.getElementsByClassName("media-item");
+            if (n >= slides.length) { slideIndex = 0; }
+            if (n < 0) { slideIndex = slides.length - 1; }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
+        }
+    </script>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="Logo-04 (Small).png" type="image/x-icon">
+
+    <title>My Projects</title>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <nav id="header">
+            <div class="nav-logo">
+                <a href="index.html">
+                <img src="Logo-04 (Small).png" class="nav-logo-img">
+                </a>
+            </div>        
+            <div class="nav-menu" id="myNavMenu">
+                <ul class="nav_menu_list">
+                    <li class="nav_list">
+                        <a href="index.html#home" class="nav-link">Home</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="index.html#about" class="nav-link">About</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="projects.html" class="nav-link active-link">Projects</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="index.html#contact" class="nav-link">Contact</a>
+                        <div class="circle"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="floating-button">
+                <button onclick="window.location.href='mailto:muhammadbahaa.b@gmail.com';">
+                    <i class="uil uil-envelope"></i> Email Me
+                </button>
+            </div>            
+            <div class="nav-button">
+                <button class="btn" onclick="window.location.href='mailto:muhammadbahaa.b@gmail.com';">Email Me <i class="uil uil-envelope"></i></button>
+            </div>            
+            <div class="nav-menu-btn">
+                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+            </div>
+          </nav>
+        <!-- MAIN CONTENT -->
+        <main class="wrapper">
+            <!-- Motion Design Section -->
+            <section class="section" id="motion-design">
+                <div class="top-header">
+                    <h2>Motion Design Projects</h2>
+                </div>
+                <div class="project-container">
+                    <div class="project-box" onclick="openModal('explainer-videos')">
+                        <img src="Pr/md/gif/delag11.gif" alt="Explainer Videos" class="project-image">
+                        <h3>ACP Explainer Video Project</h3>
+                        <label></label>
+                    </div>
+                    <div class="project-box" onclick="openModal('motion-logo-1')">
+                        <img src="Pr/md/gif/Main.gif" alt="Motion Logos" class="project-image">
+                        <h3>Power Logo Animation</h3>
+                        <label></label>
+                    </div>
+                    <div class="project-box" onclick="openModal('motion-logo-2')">
+                        <img src="Pr/md/gif/Wingify_1.gif" alt="Motion Logos" class="project-image">
+                        <h3>Wingify Logo Animation</h3>
+                        <label></label>
+                    </div>
+                    <div class="project-box" onclick="openModal('motion-logo-3')">
+                        <img src="Pr/md/gif/Comp 1.gif" alt="Motion Logos" class="project-image">
+                        <h3>M Logo Animation</h3>
+                        <label></label>
+                    </div>
+                    <div class="project-box" onclick="openModal('motion-logo-4')">
+                        <img src="Pr/md/gif/index-1 (2).gif" alt="Motion Logos" class="project-image">
+                        <h3>Amazon Logo Animation</h3>
+                        <label></label>
+                    </div>
+                    <div class="project-box" onclick="openModal('motion-logo-5')">
+                        <img src="Pr/md/gif/RX Black Bg.gif" alt="Motion Logos" class="project-image">
+                        <h3>RX Logo Animation Loop</h3>
+                        <label></label>
+                    </div>
+                </div>
+            </section>
+            <!-- Graphic Designs Section -->
+    <section class="section" id="graphic-design">
+        <div class="top-header">
+            <h2>Graphic Design Projects</h2>
+        </div>
+        <div class="project-container">
+            <div class="project-box" onclick="openModal('graphic-design-project-1')">
+                <img src="Pr/gd/lg/Power Vi-03-page-00001.jpg" alt="Graphic Design 1" class="project-image">
+                <h3>Power Vi</h3>
+                <label></label>
+            </div>
+            <div class="project-box" onclick="openModal('graphic-design-project-2')">
+                <img src="Pr/gd/lg/Valley 1-03.png" alt="Graphic Design 2" class="project-image">
+                <h3>Valley Innovation Vi</h3>
+                <label></label>
+            </div>
+            <div class="project-box" onclick="openModal('graphic-design-project-3')">
+                <img src="Pr/gd/photo-collage.png.png" alt="Graphic Design 2" class="project-image">
+                <h3>Social Media Designs</h3>
+                <label></label>
+            </div>
+            <div class="project-box" onclick="openModal('graphic-design-project-4')">
+                <img src="Pr/gd/photo-collage.png (1).png" alt="Graphic Design 2" class="project-image">
+                <h3>Power Social Media Posts</h3>
+                <label></label>
+            </div>
+            <div class="project-box" onclick="openModal('graphic-design-project-5')">
+                <img src="Pr/gd/lg/logo11.png" alt="Graphic Design 2" class="project-image">
+                <h3>Sabb_Al3ezza</h3>
+                <label></label>
+            </div>
+        </div>
+    </section>
+            <!-- Modals -->
+            <!-- Motion Logos Modal -->
+            <div id="motion-logo-1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('motion-logo-1')">×</span>
+                    <h2>Motion Logos</h2>
+                    <div class="modal-media">
+                        <!-- Combined Media Items -->
+                        <div class="media-item">
+                            <img src="Pr/md/gif/Main.gif" alt="Motion Logo 7" class="modal-image">
+                        </div>
+                        <!-- Add more videos as needed -->
+                    </div>
+                    <div class="modal-navigation">
+                        <span class="prev" onclick="prevSlide('motion-logo-1')">❮</span>
+                        <span class="next" onclick="nextSlide('motion-logo-1')">❯</span>
+                    </div>
+                </div>
+            </div>
+            <div id="motion-logo-2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('motion-logo-2')">×</span>
+                    <h2>Motion Logos</h2>
+                    <div class="modal-media">
+                        <!-- Combined Media Items -->
+                        <div class="media-item">
+                            <img src="Pr/md/gif/Wingify_1.gif" alt="Motion Logo 8" class="modal-image">
+                        </div>
+                        <!-- Add more videos as needed -->
+                    </div>
+                    <div class="modal-navigation">
+                        <span class="prev" onclick="prevSlide('motion-logo-2')">❮</span>
+                        <span class="next" onclick="nextSlide('motion-logo-2')">❯</span>
+                    </div>
+                </div>
+            </div>
+            <div id="motion-logo-3" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('motion-logo-3')">×</span>
+                    <h2>Motion Logos</h2>
+                    <div class="modal-media">
+                        <!-- Combined Media Items -->
+                        <div class="media-item">
+                            <img src="Pr/md/gif/Comp 1.gif" alt="Motion Logo 2" class="modal-image">
+                        </div>
+                        <!-- Add more videos as needed -->
+                    </div>
+                    <div class="modal-navigation">
+                        <span class="prev" onclick="prevSlide('motion-logo-3')">❮</span>
+                        <span class="next" onclick="nextSlide('motion-logo-3')">❯</span>
+                    </div>
+                </div>
+            </div>
+            <div id="motion-logo-4" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('motion-logo-4')">×</span>
+                    <h2>Motion Logos</h2>
+                    <div class="modal-media">
+                        <!-- Combined Media Items -->
+                        <div class="media-item">
+                            <img src="Pr/md/gif/index-1 (2).gif" alt="Motion Logo 2" class="modal-image">
+                        </div>
+                        <!-- Add more videos as needed -->
+                    </div>
+                    <div class="modal-navigation">
+                        <span class="prev" onclick="prevSlide('motion-logo-4')">❮</span>
+                        <span class="next" onclick="nextSlide('motion-logo-4')">❯</span>
+                    </div>
+                </div>
+            </div>
+            <div id="motion-logo-5" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('motion-logo-5')">×</span>
+                    <h2>Motion Logos</h2>
+                    <div class="modal-media">
+                        <!-- Combined Media Items -->
+                        <div class="media-item">
+                            <img src="Pr/md/gif/RX Black Bg.gif" alt="Motion Logo 2" class="modal-image">
+                        </div>
+                        <div class="media-item">
+                            <img src="Pr/md/gif/Rx White Bg.gif" alt="Motion Logo 2" class="modal-image">
+                        </div>
+                        <!-- Add more videos as needed -->
+                    </div>
+                    <div class="modal-navigation">
+                        <span class="prev" onclick="prevSlide('motion-logo-5')">❮</span>
+                        <span class="next" onclick="nextSlide('motion-logo-5')">❯</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Explainer Videos Modal -->
+            <div id="explainer-videos" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('explainer-videos')">×</span>
+                    <h2>Explainer Videos</h2>
+                    <div class="modal-media">
+                        <video controls class="modal-video" style="width: 100%; height: auto;">
+                            <source src="Pr/md/Complete v 1 ACP_1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <!-- Add more videos as needed -->
+                    </div>
+                    <div class="modal-navigation">
+                        <span class="prev" onclick="prevSlide('explainer-videos')">❮</span>
+                        <span class="next" onclick="nextSlide('explainer-videos')">❯</span>
+                    </div>
+                </div>
+            </div>
+            <!---- Graphic Design Modal ----->
+            <div id="graphic-design-project-1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('graphic-design-project-1')">×</span>
+                    <h2>Power fir Chemicals and Plast Vi</h2>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/p/Power Vi-01-page-00001.jpg" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/p/Power Vi-02-page-00001.jpg" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/p/Power Vi-03-page-00001.jpg" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/p/Power Vi-04-page-00001.jpg" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/p/Power Vi-05-page-00001.jpg" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/p/Power Vi-06-page-00001.jpg" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-navigation">
+                        <span class="prev" onclick="prevSlide('graphic-design-project-1')">❮</span>
+                        <span class="next" onclick="nextSlide('graphic-design-project-1')">❯</span>
+                    </div>
+                </div>
+            </div>
+            <div id="graphic-design-project-2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('graphic-design-project-2')">×</span>
+                    <h2>Valley Innovation Vi</h2>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/v/Valley 123_1.jpg" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/v/Valley 123_2.jpg" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/v/Valley 123_3.jpg" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/v/Valley 123_4.jpg" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/v/Valley 123_5.jpg" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/v/Valley 123_6.jpg" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/v/Valley 123_7.jpg" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/v/Valley 123_8.jpg" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-navigation">
+                        <span class="prev" onclick="prevSlide('graphic-design-project-2')">❮</span>
+                        <span class="next" onclick="nextSlide('graphic-design-project-2')">❯</span>
+                    </div>
+                </div>
+            </div>
+            <div id="graphic-design-project-3" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('graphic-design-project-3')">×</span>
+                    <h2>Social Media Designs</h2>
+                    <div class="modal-media">
+                        <img src="Pr/gd/elano4.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/shcwepps22.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/Zad2.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-navigation">
+                        <span class="prev" onclick="prevSlide('graphic-design-project-3')">❮</span>
+                        <span class="next" onclick="nextSlide('graphic-design-project-3')">❯</span>
+                    </div>
+                </div>
+            </div>
+            <div id="graphic-design-project-4" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('graphic-design-project-4')">×</span>
+                    <h2>Power Social Media Posts</h2>
+                    <div class="modal-media">
+                        <img src="Pr/gd/ECO Shield.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/Power Bond.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/Power Cellar.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/Power Finish Pur.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/power gaurd.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/Power Poxy Bond.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/Power Poxy Primer.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/Power Primer R.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/power primer.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/power seal e2.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/Power Serafex.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/Power Shield.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-navigation">
+                        <span class="prev" onclick="prevSlide('graphic-design-project-4')">❮</span>
+                        <span class="next" onclick="nextSlide('graphic-design-project-4')">❯</span>
+                    </div>
+                </div>
+            </div>
+            <div id="graphic-design-project-5" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('graphic-design-project-5')">×</span>
+                    <h2>Sabb_Al3ezza Content</h2>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/s/1.1.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/s/12.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/s/Eid-Mubarak-Social-Media-Banner-08.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/s/اللقاء-الاول.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/s/خالد-بن-الوليد.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/s/رمضان-كريم.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/s/طارق بن زياد.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/s/عبدالله ذو البجادين.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-media">
+                        <img src="Pr/gd/lg/s/عيد-فطر-مبارك.png" alt="Graphic Design 2" class="modal-image">
+                    </div>
+                    <div class="modal-navigation">
+                        <span class="prev" onclick="prevSlide('graphic-design-project-5')">❮</span>
+                        <span class="next" onclick="nextSlide('graphic-design-project-5')">❯</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="top-footer">
+                <p>Muhammad Bahaa</p>
+            </div>
+            <div class="middle-footer">
+                <ul class="footer-menu">
+                    <li class="footer_menu_list"><a href="index.html">Home</a></li>
+                    <li class="footer_menu_list"><a href="index.html#about">About</a></li>
+                    <li class="footer_menu_list"><a href="projects.html">Projects</a></li>
+                    <li class="footer_menu_list"><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social-icons">
+                <div class="icon"><a href="https://www.instagram.com/muhammadbahaa1/"><i class="uil uil-instagram"></i></a></div>
+                <div class="icon"><a href="https://www.linkedin.com/in/muhammad-bahaa"><i class="uil uil-linkedin-alt"></i></a></div>
+                <div class="icon"><a href="https://github.com/MuhammadBahaa1/"><i class="uil uil-github-alt"></i></a></div>
+            </div>
+            <div class="bottom-footer">
+                <p>Copyright &copy; <a href="index.html" style="text-decoration: none;">Muhammad Bahaa</a> - All rights reserved</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- TYPING JS Link -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- SCROLL REVEAL JS Link -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- MAIN JS -->
+    <script src="main.js"></script>
+</body>
+</html>
