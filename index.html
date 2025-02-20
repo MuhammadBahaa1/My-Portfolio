@@ -11806,6 +11806,14 @@
       fetchpriority="low"
       src="https://framerusercontent.com/sites/1OPNtzarzcA7GvzOW7EwxN/script_main.6TSAZMXC.mjs"
     ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          let framerToolbar = document.querySelector('[class*="editorBar"], [class*="framer-toolbar"]');
+          if (framerToolbar) {
+              framerToolbar.remove();
+          }
+      });
+  </script>  
     <div
       id="svg-templates"
       style="
